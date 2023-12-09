@@ -1,6 +1,5 @@
 def is_valid_email(email):
     k, j, d = 0, 0, 0
-
     if len(email) >= 6:
         if email[0].isalpha():
             if email.count("@") == 1:
@@ -15,7 +14,6 @@ def is_valid_email(email):
                             continue
                         elif i not in ["-", ".", "@", "_"]:
                             d = 1
-
                     if k == 1 or j == 1 or d == 1:
                         print("Wrong Email; Invalid characters or uppercase letters")
                         return False
@@ -30,9 +28,8 @@ def is_valid_email(email):
             print("Wrong Email; Email must start with an alphabetical character")
     else:
         print("Wrong Email; Length should be at least 6 characters")
-
+        
     return False
-
 # Ask the user to enter the email until a valid email is provided
 while True:
     email = input("Enter your Email: ")
